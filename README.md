@@ -1,6 +1,6 @@
 # FrozenLake-v1
 This repository contains my implementation of Q-learning for solving the FrozenLake environment. I applied Q-learning, a reinforcement learning algorithm, to teach an agent to navigate a frozen lake and reach the goal. <br>
-I used this [article](https://pages.github.com/](https://towardsdatascience.com/q-learning-for-beginners-2837b777741)https://towardsdatascience.com/q-learning-for-beginners-2837b777741).<br>
+I used this [article](https://towardsdatascience.com/q-learning-for-beginners-2837b777741).<br>
 I have used Spyder IDE with Anaconda for coding. <br>
 I faced some errors in the code lines from the article and changed some code lines. <br>
 Here is some of them:
@@ -23,7 +23,8 @@ ValueError: too many values to unpack (expected 4)
         obs, reward, done, truncated, info = environment.step(action)
 ```
 Then all the q-learning algorithm worked as I intended. <br>
-## So I can summarize how the code works.
+## So I can summarize how the code works.<br>
+![gif](/frozen_lake_v1/img/frozen_lake.gif)
 
 > These are the libraries we should use.
 ```python
@@ -48,11 +49,11 @@ alpha = 0.5            # Learning rate
 gamma = 0.9            # Discount factor
 ```
 
-> Output: RESIM EKLE
 ```python
 print('Q-table before training:')
 print(qtable)
 ```
+> Output: ![q-tableb](/frozen_lake_v1/img/qtable-before.png)
 
 > For teaching the agent.
 ```python
@@ -89,13 +90,12 @@ for _ in range(episodes):
           outcomes[-1] = "Success"
 ```
 
-> Output: RESIM EKLE
 ```python
 print('Q-table after training:')
 print(qtable)
 ```
+> Output: ![q-tablea](/frozen_lake_v1/img/qtable-after.png)
 
-> Seeing the result in a plot like this: RESIM EKLE
 ```python
 plt.figure(figsize=(12, 5))
 plt.xlabel("Run number")
@@ -105,6 +105,7 @@ ax.set_facecolor('#efeeea')
 plt.bar(range(len(outcomes)), outcomes, color="#0A047A", width=1.0)
 plt.show()
 ```
+> Seeing the result in a plot like this: ![plot](/frozen_lake_v1/img/plot.png)
 
 > For learning the success rate.
 ```python
