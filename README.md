@@ -4,8 +4,10 @@ I used this [article](https://towardsdatascience.com/q-learning-for-beginners-28
 I have used Spyder IDE with Anaconda for coding. <br>
 I faced some errors in the code lines from the article and changed some code lines. <br>
 Here is some of them:
-> I was facing an error like the image.
-> 
+> I was facing an error like the below.
+```python
+IndexError: only integers, slices (:), ellipsis (...), numpy.newaxis (None) and integer or boolean arrays are valid indices
+```
 > I noticed that state was a tuple.
 > I added [0] for returning an integer value which is "0".
 ```python
